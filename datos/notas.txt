@@ -1,0 +1,25 @@
+EST001|15/10/2024|PARCIAL|Programación Orientada a Objetos|8.5
+EST002|15/10/2024|PARCIAL|Programación Orientada a Objetos|9.0
+EST003|15/10/2024|PARCIAL|Programación Orientada a Objetos|7.5
+EST004|15/10/2024|PARCIAL|Programación Orientada a Objetos|8.0
+EST006|15/10/2024|PARCIAL|Programación Orientada a Objetos|9.5
+EST010|15/10/2024|PARCIAL|Programación Orientada a Objetos|7.0
+EST014|15/10/2024|PARCIAL|Programación Orientada a Objetos|8.5
+EST001|18/10/2024|PARCIAL|Algoritmos y Estructuras de Datos|7.5
+EST002|18/10/2024|PARCIAL|Algoritmos y Estructuras de Datos|8.0
+EST005|18/10/2024|PARCIAL|Algoritmos y Estructuras de Datos|9.0
+EST011|18/10/2024|PARCIAL|Algoritmos y Estructuras de Datos|7.5
+EST014|18/10/2024|PARCIAL|Algoritmos y Estructuras de Datos|8.5
+EST001|22/10/2024|PARCIAL|Base de Datos|9.0
+EST003|22/10/2024|PARCIAL|Base de Datos|8.5
+EST005|22/10/2024|PARCIAL|Base de Datos|7.0
+EST010|22/10/2024|PARCIAL|Base de Datos|8.0
+EST015|22/10/2024|PARCIAL|Base de Datos|9.5
+EST002|25/10/2024|PARCIAL|Redes de Computadoras|8.5
+EST005|25/10/2024|PARCIAL|Redes de Computadoras|7.5
+EST011|25/10/2024|PARCIAL|Redes de Computadoras|8.0
+EST004|28/10/2024|PARCIAL|Ingeniería de Software|9.0
+EST015|28/10/2024|PARCIAL|Ingeniería de Software|8.5
+EST001|01/11/2024|PARCIAL|Matemática Discreta|7.5
+EST006|01/11/2024|PARCIAL|Matemática Discreta|8.0
+

@@ -1,0 +1,12 @@
+Programación Orientada a Objetos|Fundamentos de POO, diseño y patrones|ING-INF|PROF001
+Algoritmos y Estructuras de Datos|Análisis de algoritmos y estructuras fundamentales|ING-INF|PROF002
+Base de Datos|Diseño, modelado e implementación de bases de datos|ING-INF|PROF003
+Redes de Computadoras|Arquitectura de redes y protocolos de comunicación|ING-INF|PROF004
+Ingeniería de Software|Metodologías ágiles y gestión de proyectos|ING-INF|PROF005
+Matemática Discreta|Lógica, grafos y combinatoria aplicada|ING-INF|PROF006
+Arquitectura de Computadoras|Hardware, CPU y organización de sistemas|ING-INF|PROF007
+Sistemas Operativos|Gestión de procesos, memoria y sistemas|ING-INF|PROF008
+Gestión de Operaciones|Optimización y planificación de recursos|ING-IND|PROF002
+Investigación Operativa|Modelos matemáticos para toma de decisiones|ING-IND|PROF004
+Análisis Matemático I|Cálculo diferencial e integral|LIC-MAT|PROF006
+Álgebra Lineal|Espacios vectoriales y transformaciones lineales|LIC-MAT|PROF007

@@ -1,0 +1,36 @@
+EST001|Programación Orientada a Objetos
+EST001|Algoritmos y Estructuras de Datos
+EST001|Base de Datos
+EST001|Matemática Discreta
+EST002|Programación Orientada a Objetos
+EST002|Algoritmos y Estructuras de Datos
+EST002|Redes de Computadoras
+EST003|Programación Orientada a Objetos
+EST003|Base de Datos
+EST003|Arquitectura de Computadoras
+EST004|Programación Orientada a Objetos
+EST004|Ingeniería de Software
+EST004|Sistemas Operativos
+EST005|Algoritmos y Estructuras de Datos
+EST005|Base de Datos
+EST005|Redes de Computadoras
+EST006|Programación Orientada a Objetos
+EST006|Matemática Discreta
+EST006|Arquitectura de Computadoras
+EST007|Gestión de Operaciones
+EST007|Investigación Operativa
+EST008|Gestión de Operaciones
+EST009|Investigación Operativa
+EST010|Programación Orientada a Objetos
+EST010|Base de Datos
+EST011|Algoritmos y Estructuras de Datos
+EST011|Redes de Computadoras
+EST012|Análisis Matemático I
+EST012|Álgebra Lineal
+EST013|Análisis Matemático I
+EST013|Álgebra Lineal
+EST014|Programación Orientada a Objetos
+EST014|Algoritmos y Estructuras de Datos
+EST015|Base de Datos
+EST015|Ingeniería de Software
+

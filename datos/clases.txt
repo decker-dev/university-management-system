@@ -1,0 +1,18 @@
+28/10/2024|08:00|10:00|Programación Orientada a Objetos|Campus Lima|101
+28/10/2024|10:30|12:30|Algoritmos y Estructuras de Datos|Campus Lima|103
+28/10/2024|14:00|16:00|Base de Datos|Campus Lima|102
+28/10/2024|16:30|18:30|Redes de Computadoras|UADE Belgrano|401
+29/10/2024|08:00|10:00|Ingeniería de Software|Campus Lima|201
+29/10/2024|10:30|12:30|Matemática Discreta|Campus Lima|301
+29/10/2024|14:00|16:00|Arquitectura de Computadoras|Campus Lima|203
+29/10/2024|16:30|18:30|Sistemas Operativos|UADE Recoleta|501
+30/10/2024|08:00|10:00|Programación Orientada a Objetos|Campus Lima|101
+30/10/2024|10:30|12:30|Algoritmos y Estructuras de Datos|Campus Lima|103
+30/10/2024|14:00|16:00|Base de Datos|Campus Lima|102
+31/10/2024|08:00|10:00|Gestión de Operaciones|Campus Lima|201
+31/10/2024|10:30|12:30|Investigación Operativa|Campus Lima|202
+31/10/2024|14:00|16:00|Análisis Matemático I|UADE Recoleta|503
+31/10/2024|16:30|18:30|Álgebra Lineal|UADE Recoleta|504
+01/11/2024|08:00|10:00|Programación Orientada a Objetos|Campus Lima|101
+01/11/2024|10:30|12:30|Redes de Computadoras|UADE Belgrano|401
+01/11/2024|14:00|16:00|Ingeniería de Software|Campus Lima|201

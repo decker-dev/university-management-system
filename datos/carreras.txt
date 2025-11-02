@@ -1,0 +1,5 @@
+ING-INF|Ingeniería en Informática|Carrera de grado orientada al desarrollo de software y sistemas
+ING-IND|Ingeniería Industrial|Carrera de grado enfocada en optimización de procesos y gestión
+ING-SIS|Ingeniería en Sistemas|Carrera de grado en análisis y diseño de sistemas de información
+LIC-MAT|Licenciatura en Matemática|Carrera de grado en ciencias exactas y matemática aplicada
+ING-ALI|Ingeniería en Alimentos|Carrera de grado en tecnología y procesamiento de alimentos

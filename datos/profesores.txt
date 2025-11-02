@@ -1,0 +1,8 @@
+PROF001|Roberto|Martínez|roberto.martinez@uade.edu.ar|prof123
+PROF002|Laura|Fernández|laura.fernandez@uade.edu.ar|prof456
+PROF003|Diego|Sánchez|diego.sanchez@uade.edu.ar|prof789
+PROF004|Ana|López|ana.lopez@uade.edu.ar|prof321
+PROF005|Juan|Pérez|juan.perez@uade.edu.ar|prof654
+PROF006|Sofía|García|sofia.garcia@uade.edu.ar|prof987
+PROF007|Martín|Torres|martin.torres@uade.edu.ar|prof147
+PROF008|Valeria|Romero|valeria.romero@uade.edu.ar|prof258

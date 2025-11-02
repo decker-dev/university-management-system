@@ -1,0 +1,16 @@
+EST001|Lucas|Fernández|lucas.fernandez@alumnos.uade.edu.ar|est123|ING-INF
+EST002|Valentina|Gómez|valentina.gomez@alumnos.uade.edu.ar|est456|ING-INF
+EST003|Mateo|Rodríguez|mateo.rodriguez@alumnos.uade.edu.ar|est789|ING-INF
+EST004|Camila|Martínez|camila.martinez@alumnos.uade.edu.ar|est321|ING-INF
+EST005|Santiago|López|santiago.lopez@alumnos.uade.edu.ar|est654|ING-INF
+EST006|Martina|García|martina.garcia@alumnos.uade.edu.ar|est987|ING-INF
+EST007|Tomás|Pérez|tomas.perez@alumnos.uade.edu.ar|est147|ING-IND
+EST008|Sofía|Sánchez|sofia.sanchez@alumnos.uade.edu.ar|est258|ING-IND
+EST009|Felipe|Torres|felipe.torres@alumnos.uade.edu.ar|est369|ING-IND
+EST010|Emma|Díaz|emma.diaz@alumnos.uade.edu.ar|est741|ING-SIS
+EST011|Joaquín|Romero|joaquin.romero@alumnos.uade.edu.ar|est852|ING-SIS
+EST012|Isabella|Moreno|isabella.moreno@alumnos.uade.edu.ar|est963|LIC-MAT
+EST013|Benjamín|Castro|benjamin.castro@alumnos.uade.edu.ar|est159|LIC-MAT
+EST014|Catalina|Ruiz|catalina.ruiz@alumnos.uade.edu.ar|est357|ING-INF
+EST015|Nicolás|Vargas|nicolas.vargas@alumnos.uade.edu.ar|est486|ING-INF
+

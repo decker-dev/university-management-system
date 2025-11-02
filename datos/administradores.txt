@@ -1,0 +1,3 @@
+admin|Admin|Sistema|admin@uade.edu.ar|admin123
+ADM001|María|González|maria.gonzalez@uade.edu.ar|admin456
+ADM002|Carlos|Rodríguez|carlos.rodriguez@uade.edu.ar|admin789

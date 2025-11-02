@@ -1,0 +1,13 @@
+15/10/2024|20|PARCIAL|Programación Orientada a Objetos
+18/10/2024|25|PARCIAL|Algoritmos y Estructuras de Datos
+22/10/2024|15|PARCIAL|Base de Datos
+25/10/2024|18|PARCIAL|Redes de Computadoras
+28/10/2024|22|PARCIAL|Ingeniería de Software
+01/11/2024|20|PARCIAL|Matemática Discreta
+05/11/2024|25|PARCIAL|Arquitectura de Computadoras
+08/11/2024|18|PARCIAL|Sistemas Operativos
+20/11/2024|30|FINAL|Programación Orientada a Objetos
+22/11/2024|35|FINAL|Algoritmos y Estructuras de Datos
+25/11/2024|25|FINAL|Base de Datos
+27/11/2024|20|RECUPERATORIO|Programación Orientada a Objetos
+

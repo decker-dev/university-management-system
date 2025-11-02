@@ -1,0 +1,65 @@
+true|EST001|28/10/2024|Programación Orientada a Objetos
+true|EST002|28/10/2024|Programación Orientada a Objetos
+true|EST003|28/10/2024|Programación Orientada a Objetos
+false|EST004|28/10/2024|Programación Orientada a Objetos
+true|EST006|28/10/2024|Programación Orientada a Objetos
+true|EST010|28/10/2024|Programación Orientada a Objetos
+true|EST014|28/10/2024|Programación Orientada a Objetos
+true|EST001|28/10/2024|Algoritmos y Estructuras de Datos
+true|EST002|28/10/2024|Algoritmos y Estructuras de Datos
+true|EST005|28/10/2024|Algoritmos y Estructuras de Datos
+true|EST011|28/10/2024|Algoritmos y Estructuras de Datos
+false|EST014|28/10/2024|Algoritmos y Estructuras de Datos
+true|EST001|28/10/2024|Base de Datos
+true|EST003|28/10/2024|Base de Datos
+true|EST005|28/10/2024|Base de Datos
+true|EST010|28/10/2024|Base de Datos
+true|EST015|28/10/2024|Base de Datos
+true|EST002|28/10/2024|Redes de Computadoras
+false|EST005|28/10/2024|Redes de Computadoras
+true|EST011|28/10/2024|Redes de Computadoras
+true|EST004|29/10/2024|Ingeniería de Software
+true|EST015|29/10/2024|Ingeniería de Software
+true|EST001|29/10/2024|Matemática Discreta
+true|EST006|29/10/2024|Matemática Discreta
+true|EST003|29/10/2024|Arquitectura de Computadoras
+true|EST006|29/10/2024|Arquitectura de Computadoras
+true|EST004|29/10/2024|Sistemas Operativos
+true|EST001|30/10/2024|Programación Orientada a Objetos
+true|EST002|30/10/2024|Programación Orientada a Objetos
+false|EST003|30/10/2024|Programación Orientada a Objetos
+true|EST004|30/10/2024|Programación Orientada a Objetos
+true|EST006|30/10/2024|Programación Orientada a Objetos
+true|EST010|30/10/2024|Programación Orientada a Objetos
+true|EST014|30/10/2024|Programación Orientada a Objetos
+true|EST001|30/10/2024|Algoritmos y Estructuras de Datos
+true|EST002|30/10/2024|Algoritmos y Estructuras de Datos
+true|EST005|30/10/2024|Algoritmos y Estructuras de Datos
+true|EST011|30/10/2024|Algoritmos y Estructuras de Datos
+true|EST014|30/10/2024|Algoritmos y Estructuras de Datos
+true|EST001|30/10/2024|Base de Datos
+true|EST003|30/10/2024|Base de Datos
+true|EST005|30/10/2024|Base de Datos
+false|EST010|30/10/2024|Base de Datos
+true|EST015|30/10/2024|Base de Datos
+true|EST007|31/10/2024|Gestión de Operaciones
+true|EST008|31/10/2024|Gestión de Operaciones
+false|EST007|31/10/2024|Investigación Operativa
+true|EST009|31/10/2024|Investigación Operativa
+true|EST012|31/10/2024|Análisis Matemático I
+true|EST013|31/10/2024|Análisis Matemático I
+true|EST012|31/10/2024|Álgebra Lineal
+true|EST013|31/10/2024|Álgebra Lineal
+true|EST001|01/11/2024|Programación Orientada a Objetos
+true|EST002|01/11/2024|Programación Orientada a Objetos
+true|EST003|01/11/2024|Programación Orientada a Objetos
+true|EST004|01/11/2024|Programación Orientada a Objetos
+true|EST006|01/11/2024|Programación Orientada a Objetos
+true|EST010|01/11/2024|Programación Orientada a Objetos
+false|EST014|01/11/2024|Programación Orientada a Objetos
+true|EST002|01/11/2024|Redes de Computadoras
+true|EST005|01/11/2024|Redes de Computadoras
+true|EST011|01/11/2024|Redes de Computadoras
+true|EST004|01/11/2024|Ingeniería de Software
+true|EST015|01/11/2024|Ingeniería de Software
+
