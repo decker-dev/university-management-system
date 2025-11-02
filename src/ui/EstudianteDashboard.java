@@ -108,6 +108,9 @@ public class EstudianteDashboard extends JFrame {
                 // Usar método del UML: estudiante.inscribirseEnCurso()
                 estudiante.inscribirseEnCurso(materia);
                 
+                // Guardar inscripción
+                sistema.guardarInscripcion();
+                
                 JOptionPane.showMessageDialog(this, 
                     "¡Inscripción exitosa en " + materia.getNombre() + "!");
                 
