@@ -1,17 +1,33 @@
-import modelo.*;
-import enums.*;
-import java.util.Date;
+import ui.LoginFrame;
+import javax.swing.*;
 
 /**
- * Clase Main para demostrar el uso del modelo UML en español
+ * Clase Main - Inicia la interfaz gráfica del sistema
  */
 public class Main {
     public static void main(String[] args) {
+        // Configurar Look and Feel
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        // Iniciar interfaz gráfica en el hilo de eventos de Swing
+        SwingUtilities.invokeLater(() -> {
+            LoginFrame loginFrame = new LoginFrame();
+            loginFrame.setVisible(true);
+        });
+        
         System.out.println("========================================");
         System.out.println("  SISTEMA UNIVERSITARIO - MODELO UML");
         System.out.println("========================================");
+        System.out.println("Sistema iniciado con interfaz gráfica");
+        System.out.println("Usuario por defecto: admin / admin123");
         System.out.println();
 
+        /* CÓDIGO DE DEMOSTRACIÓN - Comentado para usar interfaz gráfica
+        
         // 1. Crear Administrador
         System.out.println("1. CREANDO ADMINISTRADOR...");
         Administrador admin = new Administrador("ADM001", "Juan", "Pérez", "admin@universidad.edu", "admin123");
@@ -177,6 +193,8 @@ public class Main {
         System.out.println("========================================");
         System.out.println("  DEMOSTRACIÓN COMPLETADA");
         System.out.println("========================================");
+        
+        FIN DEL CÓDIGO DE DEMOSTRACIÓN */
     }
 }
 
