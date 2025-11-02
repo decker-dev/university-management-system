@@ -45,12 +45,16 @@ public class Profesor extends Usuario {
      * @param m La materia a dictar
      * @param fecha La fecha de la clase
      * @return La clase creada
+     * @throws excepciones.PermisosDenegadosException si el profesor no dicta esta materia
      */
-    public Clase dictaMateria(Materia m, Date fecha, Date inicio, Date fin, Aula aula) {
+    public Clase dictaMateria(Materia m, Date fecha, Date inicio, Date fin, Aula aula) 
+            throws excepciones.PermisosDenegadosException {
         // Verificar que el profesor dicta esta materia
         if (!this.materias.contains(m) && m.getProfesor() != this) {
-            System.out.println("Error: No dictas esta materia");
-            return null;
+            throw new excepciones.PermisosDenegadosException(
+                this.getNombreCompleto(), 
+                "dictar la materia '" + m.getNombre() + "'"
+            );
         }
 
         // Crear la clase
@@ -113,11 +117,15 @@ public class Profesor extends Usuario {
 
     /**
      * Método adicional: Crear un examen para una materia
+     * @throws excepciones.PermisosDenegadosException si el profesor no dicta esta materia
      */
-    public Examen crearExamen(Materia m, Date fecha, int cantidadPreguntas, enums.TipoExamen tipo) {
+    public Examen crearExamen(Materia m, Date fecha, int cantidadPreguntas, enums.TipoExamen tipo) 
+            throws excepciones.PermisosDenegadosException {
         if (!this.materias.contains(m)) {
-            System.out.println("Error: No dictas esta materia");
-            return null;
+            throw new excepciones.PermisosDenegadosException(
+                this.getNombreCompleto(),
+                "crear examen para la materia '" + m.getNombre() + "'"
+            );
         }
 
         Examen examen = new Examen(fecha, cantidadPreguntas, m, this, tipo);

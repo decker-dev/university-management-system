@@ -75,8 +75,12 @@ public class Main {
 
         // 7. Estudiante se inscribe en materias
         System.out.println("7. ESTUDIANTE SE INSCRIBE EN MATERIAS...");
-        estudiante.inscribirseEnCurso(poo);
-        estudiante.inscribirseEnCurso(algebra);
+        try {
+            estudiante.inscribirseEnCurso(poo);
+            estudiante.inscribirseEnCurso(algebra);
+        } catch (excepciones.InscripcionException e) {
+            System.out.println("   ERROR: " + e.getMessage());
+        }
         System.out.println();
 
         // 8. Ver materias disponibles
@@ -108,7 +112,12 @@ public class Main {
         Date inicio = new Date(hoy.getTime());
         Date fin = new Date(hoy.getTime() + 2 * 60 * 60 * 1000); // 2 horas después
         
-        Clase clase = profesor.dictaMateria(poo, hoy, inicio, fin, aula);
+        Clase clase = null;
+        try {
+            clase = profesor.dictaMateria(poo, hoy, inicio, fin, aula);
+        } catch (excepciones.PermisosDenegadosException e) {
+            System.out.println("   ERROR: " + e.getMessage());
+        }
         System.out.println();
 
         // 13. Registrar asistencia
@@ -118,16 +127,42 @@ public class Main {
 
         // 14. Crear examen
         System.out.println("14. PROFESOR CREA EXAMEN...");
-        Examen examen = profesor.crearExamen(poo, hoy, 10, TipoExamen.PARCIAL);
+        Examen examen = null;
+        try {
+            examen = profesor.crearExamen(poo, hoy, 10, TipoExamen.PARCIAL);
+        } catch (excepciones.PermisosDenegadosException e) {
+            System.out.println("   ERROR: " + e.getMessage());
+        }
         System.out.println();
 
         // 15. Calificar examen
         System.out.println("15. PROFESOR CALIFICA EXAMEN...");
-        Nota nota = profesor.calificarExamen(estudiante, examen, 8.5);
-        System.out.println("   Nota: " + nota.getNota());
+        if (examen != null) {
+            Nota nota = profesor.calificarExamen(estudiante, examen, 8.5);
+            System.out.println("   Nota: " + nota.getNota());
+        }
+        System.out.println();
+        
+        // 16. DEMOSTRACIÓN DE EXCEPCIONES
+        System.out.println("16. DEMOSTRANDO MANEJO DE EXCEPCIONES...");
+        System.out.println("   a) Intento de inscripción duplicada:");
+        try {
+            estudiante.inscribirseEnCurso(poo);
+        } catch (excepciones.InscripcionException e) {
+            System.out.println("      ✓ Excepción capturada: " + e.getMessage());
+        }
+        System.out.println();
+        
+        System.out.println("   b) Intento de crear examen sin permisos:");
+        Profesor otroProfesor = admin.crearProfesor("PROF999", "Pedro", "López", "pedro@universidad.edu", "prof999");
+        try {
+            otroProfesor.crearExamen(poo, hoy, 5, TipoExamen.FINAL);
+        } catch (excepciones.PermisosDenegadosException e) {
+            System.out.println("      ✓ Excepción capturada: " + e.getMessage());
+        }
         System.out.println();
 
-        // 16. Estadísticas finales
+        // 17. Estadísticas finales
         System.out.println("========================================");
         System.out.println("  ESTADÍSTICAS FINALES");
         System.out.println("========================================");

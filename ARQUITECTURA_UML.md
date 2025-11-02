@@ -1,16 +1,16 @@
-# 📐 Arquitectura del Sistema - Implementación según UML
+# Arquitectura del Sistema - Implementación según UML
 
-## 🎯 Objetivo del Documento
+## Objetivo del Documento
 
 Este documento explica cómo la implementación del sistema universitario **sigue fielmente el diagrama UML proporcionado**, justificando las decisiones de diseño tomadas.
 
 ---
 
-## ✅ **Implementación Fiel al UML - TODO EN ESPAÑOL**
+## Implementación Fiel al UML - TODO EN ESPAÑOL
 
 Esta implementación está en la carpeta `/src` y contiene **únicamente el modelo de negocio** según el UML, sin capas técnicas adicionales (sin Services, sin DAOs, sin UI).
 
-### 📂 **Estructura de Archivos**
+### Estructura de Archivos
 
 ```
 src/
@@ -19,6 +19,11 @@ src/
 │   ├── TipoExamen.java          # PARCIAL, FINAL, RECUPERATORIO
 │   ├── TipoAula.java            # TEORIA, LABORATORIO, AUDITORIO
 │   └── EstadoInscripcion.java   # ACTIVA, APROBADA, REPROBADA
+├── excepciones/
+│   ├── InscripcionException.java           # Errores de inscripción
+│   ├── MateriaNoEncontradaException.java   # Materia no encontrada
+│   ├── PermisosDenegadosException.java     # Sin permisos
+│   └── CapacidadExcedidaException.java     # Capacidad excedida
 └── modelo/
     ├── Usuario.java             # Clase abstracta base
     ├── Estudiante.java          # Hereda de Usuario
@@ -35,7 +40,7 @@ src/
 
 ---
 
-## 📊 **Mapeo UML → Código (En Español)**
+## Mapeo UML a Código (En Español)
 
 | **UML** | **Código** | **Ubicación** |
 |---------|-----------|---------------|
@@ -54,11 +59,20 @@ src/
 | `TipoAula` | `TipoAula` | `enums/TipoAula.java` |
 | `EstadoInscripcion` | `EstadoInscripcion` | `enums/EstadoInscripcion.java` |
 
+### **Excepciones Personalizadas** (Adicionales para demostrar herencia de Exception)
+
+| **Excepción** | **Hereda de** | **Uso** |
+|---------------|---------------|---------|
+| `InscripcionException` | `Exception` | Errores al inscribirse en materias |
+| `MateriaNoEncontradaException` | `Exception` | Cuando no se encuentra una materia |
+| `PermisosDenegadosException` | `Exception` | Usuario sin permisos para una acción |
+| `CapacidadExcedidaException` | `RuntimeException` | Capacidad de aula/materia excedida |
+
 ---
 
-## 🔍 **Comparación Detallada: UML vs Implementación**
+## Comparación Detallada: UML vs Implementación
 
-### 1. **Jerarquía de Usuario** ✅
+### 1. Jerarquía de Usuario
 
 **UML:**
 ```
@@ -98,7 +112,7 @@ public class Administrador extends Usuario {
 }
 ```
 
-### 2. **Clase Materia con Relaciones** ✅
+### 2. Clase Materia con Relaciones
 
 **UML muestra:**
 - Materia tiene muchos (*) Estudiantes
@@ -120,13 +134,13 @@ public class Materia {
 }
 ```
 
-### 3. **Métodos del UML en Estudiante** ✅
+### 3. Métodos del UML en Estudiante
 
-| **Método UML** | **Implementación** | **¿Funciona?** |
+| **Método UML** | **Implementación** | **Funciona** |
 |----------------|-------------------|----------------|
-| `inscribirseEnCurso(materia: Materia)` | `inscribirseEnCurso(Materia materia)` | ✅ Sí |
-| `verMaterias()` | `verMaterias()` | ✅ Sí |
-| `materiasInscriptas(legajo: str)` | `materiasInscriptas(String legajo)` | ✅ Sí |
+| `inscribirseEnCurso(materia: Materia)` | `inscribirseEnCurso(Materia materia)` | Sí |
+| `verMaterias()` | `verMaterias()` | Sí |
+| `materiasInscriptas(legajo: str)` | `materiasInscriptas(String legajo)` | Sí |
 
 **Código:**
 ```java
@@ -162,13 +176,13 @@ public class Estudiante extends Usuario {
 }
 ```
 
-### 4. **Métodos del UML en Profesor** ✅
+### 4. Métodos del UML en Profesor
 
-| **Método UML** | **Implementación** | **¿Funciona?** |
+| **Método UML** | **Implementación** | **Funciona** |
 |----------------|-------------------|----------------|
-| `dictaMateria(m: Materia, fecha: Date)` | `dictaMateria(Materia, Date, Date, Date, Aula)` | ✅ Sí |
-| `esEstudiante(e: Estudiante, m: Materia)` | `esEstudiante(Estudiante, Materia)` | ✅ Sí |
-| `haAsistidoClase(e, c, fecha)` | `haAsistidoClase(Estudiante, Clase, Date)` | ✅ Sí |
+| `dictaMateria(m: Materia, fecha: Date)` | `dictaMateria(Materia, Date, Date, Date, Aula)` | Sí |
+| `esEstudiante(e: Estudiante, m: Materia)` | `esEstudiante(Estudiante, Materia)` | Sí |
+| `haAsistidoClase(e, c, fecha)` | `haAsistidoClase(Estudiante, Clase, Date)` | Sí |
 
 **Código:**
 ```java
@@ -192,13 +206,13 @@ public class Profesor extends Usuario {
 }
 ```
 
-### 5. **Métodos del UML en Administrador** ✅
+### 5. Métodos del UML en Administrador
 
-| **Método UML** | **Implementación** | **¿Funciona?** |
+| **Método UML** | **Implementación** | **Funciona** |
 |----------------|-------------------|----------------|
-| `crearCarrera(nombre, desc, carrera)` | `crearCarrera(String, String, String)` | ✅ Sí |
-| `crearMateria(nombre, desc, carrera, camino)` | `crearMateria(String, String, Carrera, String)` | ✅ Sí |
-| `modificarCarrera(...)` | `modificarCarrera(Carrera, String, String, String)` | ✅ Sí |
+| `crearCarrera(nombre, desc, carrera)` | `crearCarrera(String, String, String)` | Sí |
+| `crearMateria(nombre, desc, carrera, camino)` | `crearMateria(String, String, Carrera, String)` | Sí |
+| `modificarCarrera(...)` | `modificarCarrera(Carrera, String, String, String)` | Sí |
 
 **Código:**
 ```java
@@ -225,9 +239,9 @@ public class Administrador extends Usuario {
 
 ---
 
-## 🔧 **Corrección del Error del UML: Clase `Nota`**
+## Corrección del Error del UML: Clase Nota
 
-### ❌ **Problema en el UML Original**
+### Problema en el UML Original
 
 El UML muestra:
 ```
@@ -240,7 +254,7 @@ Estudiante (*) ---rinde--- (*) Examen
 - La nota no puede estar en `Examen` (muchos estudiantes lo rinden)
 - La nota no puede estar en `Estudiante` (rinde muchos exámenes)
 
-### ✅ **Solución: Clase de Asociación `Nota`**
+### Solución: Clase de Asociación Nota
 
 **Diagrama Corregido:**
 ```
@@ -267,22 +281,22 @@ Nota nota = profesor.calificarExamen(estudiante, examen, 8.5);
 
 ---
 
-## 🎯 **¿Sigue esta implementación el UML?**
+## ¿Sigue esta implementación el UML?
 
-### ✅ **SÍ, completamente:**
+### SÍ, completamente:
 
-1. ✅ **Todas las clases del UML están implementadas** (Usuario, Estudiante, Profesor, etc.)
-2. ✅ **Todos los atributos del UML están incluidos**
-3. ✅ **Todos los métodos del UML están implementados**
-4. ✅ **Todas las relaciones están correctamente modeladas** (herencia, composición, agregación)
-5. ✅ **Todos los enums están implementados** (TipoExamen, TipoAula, EstadoInscripcion)
-6. ✅ **Se corrigió el error del UML** (Nota como clase de asociación)
-7. ✅ **TODO en español** (nombres de clases, métodos, variables)
-8. ✅ **SOLO modelo de negocio** (sin capas técnicas como Services/DAOs)
+1. Todas las clases del UML están implementadas (Usuario, Estudiante, Profesor, etc.)
+2. Todos los atributos del UML están incluidos
+3. Todos los métodos del UML están implementados
+4. Todas las relaciones están correctamente modeladas (herencia, composición, agregación)
+5. Todos los enums están implementados (TipoExamen, TipoAula, EstadoInscripcion)
+6. Se corrigió el error del UML (Nota como clase de asociación)
+7. TODO en español (nombres de clases, métodos, variables)
+8. SOLO modelo de negocio (sin capas técnicas como Services/DAOs)
 
 ---
 
-## 🚀 **Cómo Ejecutar**
+## Cómo Ejecutar
 
 ```bash
 # Compilar
@@ -320,30 +334,30 @@ Materias del profesor: 2
 
 ---
 
-## 📋 **Resumen de Clases y Métodos**
+## Resumen de Clases y Métodos
 
 ### **Usuario (abstracto)**
 - Atributos: `legajo`, `nombre`, `apellido`, `email`, `password`
 
-### **Estudiante extends Usuario**
+### Estudiante extends Usuario
 - Atributos: `carrera`, `materiasInscriptas`
 - Métodos:
-  - ✅ `inscribirseEnCurso(Materia)` → UML
-  - ✅ `verMaterias()` → UML
-  - ✅ `materiasInscriptas(String legajo)` → UML
+  - `inscribirseEnCurso(Materia)` del UML
+  - `verMaterias()` del UML
+  - `materiasInscriptas(String legajo)` del UML
 
-### **Profesor extends Usuario**
+### Profesor extends Usuario
 - Atributos: `materias`
 - Métodos:
-  - ✅ `dictaMateria(Materia, Date, ...)` → UML
-  - ✅ `esEstudiante(Estudiante, Materia)` → UML
-  - ✅ `haAsistidoClase(Estudiante, Clase, Date)` → UML
+  - `dictaMateria(Materia, Date, ...)` del UML
+  - `esEstudiante(Estudiante, Materia)` del UML
+  - `haAsistidoClase(Estudiante, Clase, Date)` del UML
 
-### **Administrador extends Usuario**
+### Administrador extends Usuario
 - Métodos:
-  - ✅ `crearCarrera(String, String, String)` → UML
-  - ✅ `crearMateria(String, String, Carrera, String)` → UML
-  - ✅ `modificarCarrera(Carrera, ...)` → UML
+  - `crearCarrera(String, String, String)` del UML
+  - `crearMateria(String, String, Carrera, String)` del UML
+  - `modificarCarrera(Carrera, ...)` del UML
 
 ### **Materia**
 - Atributos: `nombre`, `descripcion`, `carrera`, `profesor`
@@ -375,7 +389,7 @@ Materias del profesor: 2
 
 ---
 
-## 💡 **Para la Presentación**
+## Para la Presentación
 
 Puedes explicar:
 
@@ -383,14 +397,82 @@ Puedes explicar:
 
 ---
 
-## ✅ **Ventajas de esta Implementación**
+## Ventajas de esta Implementación
 
-1. ✅ **Fidelidad al UML**: Cada clase, método y relación del UML está implementada
-2. ✅ **Código en español**: Facilita la comprensión en contexto académico latinoamericano
-3. ✅ **Modelo puro**: Sin contaminación de capas técnicas (DAOs, Services, UI)
-4. ✅ **Corrección de errores**: Clase `Nota` corrige el problema de la asociación muchos-a-muchos
-5. ✅ **Funcional**: El código compila y ejecuta correctamente
-6. ✅ **Demostrable**: `Main.java` demuestra todos los métodos del UML en acción
+1. Fidelidad al UML: Cada clase, método y relación del UML está implementada
+2. Código en español: Facilita la comprensión en contexto académico latinoamericano
+3. Modelo puro: Sin contaminación de capas técnicas (DAOs, Services, UI)
+4. Corrección de errores: Clase `Nota` corrige el problema de la asociación muchos-a-muchos
+5. Funcional: El código compila y ejecuta correctamente
+6. Demostrable: `Main.java` demuestra todos los métodos del UML en acción
+7. Manejo de errores: Incluye excepciones personalizadas que heredan de `Exception` y `RuntimeException`
+
+---
+
+## Excepciones Personalizadas
+
+Para cumplir con los requisitos académicos de manejo de errores, se implementaron 4 excepciones personalizadas:
+
+### 1. **InscripcionException** (extends Exception)
+```java
+public class InscripcionException extends Exception {
+    // Se lanza cuando hay errores al inscribirse en materias
+}
+```
+**Uso:**
+```java
+try {
+    estudiante.inscribirseEnCurso(materia);
+} catch (InscripcionException e) {
+    System.out.println("Error: " + e.getMessage());
+}
+```
+
+### 2. **PermisosDenegadosException** (extends Exception)
+```java
+public class PermisosDenegadosException extends Exception {
+    private String usuario;
+    private String accion;
+    // Se lanza cuando un usuario no tiene permisos
+}
+```
+**Uso:**
+```java
+try {
+    profesor.dictaMateria(materia, fecha, ...);
+} catch (PermisosDenegadosException e) {
+    System.out.println("Sin permisos: " + e.getMessage());
+}
+```
+
+### 3. **MateriaNoEncontradaException** (extends Exception)
+```java
+public class MateriaNoEncontradaException extends Exception {
+    private String nombreMateria;
+    // Se lanza cuando no se encuentra una materia
+}
+```
+
+### 4. **CapacidadExcedidaException** (extends RuntimeException)
+```java
+public class CapacidadExcedidaException extends RuntimeException {
+    private int capacidadMaxima;
+    private int capacidadActual;
+    // Se lanza cuando se excede capacidad (no chequeada)
+}
+```
+
+**Demostración en Main.java:**
+
+El programa incluye una sección que demuestra el manejo de excepciones:
+```
+16. DEMOSTRANDO MANEJO DE EXCEPCIONES...
+   a) Intento de inscripción duplicada:
+      ✓ Excepción capturada: Ya estás inscripto en la materia: POO
+   
+   b) Intento de crear examen sin permisos:
+      ✓ Excepción capturada: El usuario 'Pedro López' no tiene permisos para...
+```
 
 ---
 

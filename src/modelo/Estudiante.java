@@ -46,18 +46,21 @@ public class Estudiante extends Usuario {
      * Permite al estudiante inscribirse en una materia
      * @param materia La materia en la que desea inscribirse
      * @return true si la inscripción fue exitosa
+     * @throws excepciones.InscripcionException si hay un error en la inscripción
      */
-    public boolean inscribirseEnCurso(Materia materia) {
+    public boolean inscribirseEnCurso(Materia materia) throws excepciones.InscripcionException {
         // Validar que la materia pertenece a su carrera
         if (materia.getCarrera() != this.carrera) {
-            System.out.println("Error: La materia no pertenece a tu carrera");
-            return false;
+            throw new excepciones.InscripcionException(
+                "La materia '" + materia.getNombre() + "' no pertenece a tu carrera '" + carrera.getNombre() + "'"
+            );
         }
 
         // Verificar que no esté ya inscripto
         if (this.materiasInscriptas.contains(materia)) {
-            System.out.println("Error: Ya estás inscripto en esta materia");
-            return false;
+            throw new excepciones.InscripcionException(
+                "Ya estás inscripto en la materia: " + materia.getNombre()
+            );
         }
 
         // Inscribirse
