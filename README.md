@@ -91,7 +91,7 @@ El UML especifica tres métodos principales para la clase Estudiante:
 
 ### 4. Métodos de Profesor
 
-El UML define los siguientes métodos para Profesor:
+**Métodos especificados en el UML:**
 
 - **dictaMateria(materia, fecha, inicio, fin, aula):** Crea una nueva sesión de clase para una materia que el profesor dicta. Retorna un objeto Clase.
 
@@ -99,7 +99,11 @@ El UML define los siguientes métodos para Profesor:
 
 - **haAsistidoClase(estudiante, clase, fecha):** Consulta si un estudiante asistió a una clase específica.
 
-Adicionalmente, se implementaron métodos auxiliares para crear exámenes y calificar estudiantes, operaciones implícitas en el modelo de dominio.
+- **crearExamen(materia, fecha, cantidadPreguntas, tipo):** Permite al profesor crear un examen para una de sus materias.
+
+- **calificarExamen(estudiante, examen, nota):** Permite al profesor asignar una calificación a un estudiante en un examen específico. Retorna un objeto Nota.
+
+- **registrarAsistencia(estudiante, clase, asistio):** Registra la asistencia de un estudiante a una clase. Retorna un objeto Asistencia.
 
 ### 5. Métodos de Administrador
 
@@ -111,7 +115,13 @@ El Administrador tiene responsabilidades de gestión del sistema:
 
 - **modificarCarrera(carrera, ...):** Permite actualizar los datos de una carrera existente.
 
+- **crearEstudiante(legajo, nombre, apellido, email, password, carrera):** Crea un nuevo estudiante en el sistema.
+
+- **crearProfesor(legajo, nombre, apellido, email, password):** Crea un nuevo profesor en el sistema.
+
 - **asignarProfesorAMateria(profesor, materia):** Establece la relación entre un profesor y una materia.
+
+- **modificarMateria(materia, nombre, descripcion):** Permite actualizar los datos de una materia existente.
 
 ---
 
@@ -134,19 +144,6 @@ Se creó la clase Nota como clase de asociación (association class) que materia
 - Valor de la calificación (double)
 
 Esta solución sigue el patrón estándar de diseño orientado a objetos para manejar atributos en relaciones muchos a muchos, transformando la asociación en una clase concreta que puede tener sus propios atributos y métodos.
-
----
-
-## Conformidad con el UML
-
-### Verificación de Implementación Completa
-
-1. **Clases:** Todas las clases del diagrama UML están implementadas
-2. **Atributos:** Todos los atributos especificados están presentes
-3. **Métodos:** Todos los métodos del UML están implementados funcionalmente
-4. **Relaciones:** Las relaciones de herencia, composición y agregación están correctamente modeladas
-5. **Enumeraciones:** Los tipos enumerados están implementados como enums de Java
-6. **Pureza del modelo:** No hay contaminación con capas técnicas en el modelo de dominio
 
 ---
 
