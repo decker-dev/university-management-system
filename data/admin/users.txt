@@ -1,0 +1,3 @@
+admin|Admin|System|admin@university.edu|admin123|ADMINISTRATOR
+1|Decker|Urbano|decker@uade.com|123456|STUDENT|1
+2|MAXIMILIANO GONZALO|COEDO|coedo@uade.com|123456|TEACHER

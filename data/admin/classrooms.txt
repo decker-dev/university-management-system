@@ -1,0 +1,5 @@
+1|THEORY|101|1|40|Campus Central
+2|THEORY|102|1|35|Campus Central
+3|LABORATORY|201|2|25|Campus Central
+4|LABORATORY|202|2|25|Campus Central
+5|AUDITORIUM|301|3|100|Campus Central
