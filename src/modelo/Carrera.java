@@ -3,9 +3,6 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase Carrera según UML
- */
 public class Carrera {
     private String nombre;
     private String descripcion;

@@ -1,9 +1,5 @@
 package modelo;
 
-/**
- * Clase abstracta Usuario según UML
- * Clase base para Estudiante, Profesor y Administrador
- */
 public abstract class Usuario {
     protected String legajo;
     protected String nombre;

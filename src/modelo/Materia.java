@@ -3,10 +3,6 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase Materia según UML
- * Contiene listas de Estudiantes, Clases y Exámenes
- */
 public class Materia {
     private String nombre;
     private String descripcion;

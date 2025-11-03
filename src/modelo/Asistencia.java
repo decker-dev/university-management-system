@@ -1,9 +1,5 @@
 package modelo;
 
-/**
- * Clase Asistencia según UML
- * Representa si un estudiante asistió o no a una clase
- */
 public class Asistencia {
     private boolean asistio;
     private Estudiante estudiante;

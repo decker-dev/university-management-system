@@ -2,9 +2,6 @@ package modelo;
 
 import enums.TipoAula;
 
-/**
- * Clase Aula según UML
- */
 public class Aula {
     private String sede;
     private int numero;

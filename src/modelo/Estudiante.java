@@ -3,10 +3,6 @@ package modelo;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Clase Estudiante según UML
- * Hereda de Usuario
- */
 public class Estudiante extends Usuario {
     private Carrera carrera;
     private List<Materia> materiasInscriptas;
@@ -39,15 +35,6 @@ public class Estudiante extends Usuario {
         this.materiasInscriptas = materiasInscriptas;
     }
 
-    // ==================== MÉTODOS DEL UML ====================
-
-    /**
-     * Método del UML: inscribirseEnCurso
-     * Permite al estudiante inscribirse en una materia
-     * @param materia La materia en la que desea inscribirse
-     * @return true si la inscripción fue exitosa
-     * @throws excepciones.InscripcionException si hay un error en la inscripción
-     */
     public boolean inscribirseEnCurso(Materia materia) throws excepciones.InscripcionException {
         // Validar que la materia pertenece a su carrera
         if (materia.getCarrera() != this.carrera) {
@@ -71,11 +58,6 @@ public class Estudiante extends Usuario {
         return true;
     }
 
-    /**
-     * Método del UML: verMaterias
-     * Muestra las materias disponibles para inscribirse de su carrera
-     * @return Lista de materias disponibles (no inscriptas aún)
-     */
     public List<Materia> verMaterias() {
         List<Materia> materiasDisponibles = new ArrayList<>();
         
@@ -90,12 +72,6 @@ public class Estudiante extends Usuario {
         return materiasDisponibles;
     }
 
-    /**
-     * Método del UML: materiasInscriptas (como getter con lógica)
-     * Obtiene las materias en las que el estudiante está inscripto por su legajo
-     * @param legajo El legajo del estudiante (this.legajo)
-     * @return Lista de materias inscriptas
-     */
     public List<Materia> materiasInscriptas(String legajo) {
         if (this.legajo.equals(legajo)) {
             return this.materiasInscriptas;
@@ -103,9 +79,6 @@ public class Estudiante extends Usuario {
         return new ArrayList<>();
     }
 
-    /**
-     * Método adicional: Desinscribirse de una materia
-     */
     public boolean desinscribirseDeMateria(Materia materia) {
         if (this.materiasInscriptas.contains(materia)) {
             this.materiasInscriptas.remove(materia);

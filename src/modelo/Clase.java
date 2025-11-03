@@ -2,9 +2,6 @@ package modelo;
 
 import java.util.Date;
 
-/**
- * Clase "Clase" (sesión de clase) según UML
- */
 public class Clase {
     private Date inicio;
     private Date fin;

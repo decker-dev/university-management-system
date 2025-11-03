@@ -3,11 +3,7 @@ package modelo;
 import enums.TipoExamen;
 import java.util.Date;
 
-/**
- * Clase Examen según UML
- * NOTA: La nota NO está aquí (error del UML original)
- * La nota está en la clase Nota (clase de asociación)
- */
+
 public class Examen {
     private Date fecha;
     private int cantidadPreguntas;
